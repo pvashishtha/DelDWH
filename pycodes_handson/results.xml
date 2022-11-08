@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="0.320" timestamp="2022-11-07T14:40:28.627895" hostname="USBLRPVASHISHT1"><testcase classname="test_func" name="test_absoluteVal[10--10]" time="0.003"><failure message="assert 10 == -10&#10; +  where 10 = absoluteVal(10)">x = 10, res = -10
+
+    @pytest.mark.parametrize("x,res", [(10,-10),(-20,20),(0,0)])
+    def test_absoluteVal(x, res):
+&gt;       assert absoluteVal(x)==res
+E       assert 10 == -10
+E        +  where 10 = absoluteVal(10)
+
+test_func.py:11: AssertionError</failure></testcase><testcase classname="test_func" name="test_absoluteVal[-20-20]" time="0.002" /><testcase classname="test_func" name="test_absoluteVal[0-0]" time="0.002" /></testsuite></testsuites>
