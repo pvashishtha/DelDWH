@@ -1,0 +1,58 @@
+import random
+from IPython.display import display, clear_output
+def cows_and_bulls():
+    
+            
+    print("Welcome to cows and bulls. Both players have to guess a 3-digit unique number. The player who guesses first will win.")
+    
+    n1=int(input("Player 1 please enter your number: "))
+    clear_output(wait=True)
+    print('''''')
+    n2=int(input("Player 2 please enter your number: "))
+    clear_output(wait=True)
+    print('The game begins now.')
+    n1_str=str(n1)
+    n2_str=str(n2)
+    winner=0
+    loser=0
+    while True:
+        cows1=0
+        bulls1=0
+        cows2=0
+        bulls2=0
+        b1=input("Player 1 please enter")
+        b2=input("Player 2 please enter")
+        if (int(b1)<100 or int(b2)>999) or (b1[0] == b1[1] or b1[1] == b1[2] or b1[0] == b1[2]):
+            print("Player 1 - entered invalid number.")
+        else:
+            
+            for j in range(3):
+                if b1[j] == n2_str[j]:
+                    cows1+= 1
+                elif b1[j] in [n2_str[0], n2_str[1], n2_str[2]]:
+                    bulls1+= 1
+            if (cows1==3):
+                print("Congratulations player 1! you did it!")
+                winner=1
+                loser=2
+                break
+            else:
+                print("Player 1 has {0} cows and {1} bulls.".format(cows1,bulls1))
+        if (int(b2)<100 or int(b2)>999) or (b2[0] == b2[1] or b2[1] == b2[2] or b2[0] == b2[2]):
+            print("Player 2- entered invalid number.")
+        else:
+            
+            for j in range(3):
+                if b2[j] == n1_str[j]:
+                    cows2+= 1
+                elif b2[j] in [n1_str[0], n1_str[1], n1_str[2]]:
+                    bulls2+= 1
+            if (cows2==3):
+                print("Congratulations Player 2! you did it!")
+                winner=2
+                loser=1
+                break
+            else:
+                print("Player 2 has {0} cows and {1} bulls.".format(cows2,bulls2))
+    print('Game Over :).Player {0} won the game. better luck next time player{1}!'.format(winner,loser))
+            
