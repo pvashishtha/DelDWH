@@ -1,0 +1,13 @@
+<server>
+    <name>server-1</name>
+    <ip>10.11.23.254</ip>
+    <dns>8.8.8.8</dns>
+    <services1>
+        <type>http</type>
+        <port>80</port>
+    </services1>
+    <services2>
+        <type>https</type>
+        <port>443</port>
+    </services2>
+</server>
