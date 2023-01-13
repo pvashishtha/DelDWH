@@ -1,0 +1,5 @@
+name, marks, status
+prateek, 90, pass
+nitin, 80, pass
+rohit, 65, fail
+sumit, 95, topper
