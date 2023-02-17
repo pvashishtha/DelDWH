@@ -1,0 +1,6 @@
+,mean,sum,max,min,count
+,Qty,Qty,Qty,Qty,Qty
+Item,,,,,
+coffee,223.75,895,240,205,4
+juice,395.0,790,450,340,2
+tea,195.0,975,210,185,5
