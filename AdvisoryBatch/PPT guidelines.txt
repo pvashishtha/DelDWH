@@ -1,0 +1,6 @@
+PPt Slides:
+1. Introduction to project, idea, features, 	technology used
+2. Design- DB, Flow, etc.
+3. Target user, domain, utility of proj, scope
+4. Testing report
+5. Future scope and conclusion
