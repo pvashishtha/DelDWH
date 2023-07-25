@@ -1,5 +1,0 @@
-Welcome to Deloitte!!!
-
-command:
-
-pyinstaller --add-data "myfile.txt;." readfile.py
