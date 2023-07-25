@@ -1,5 +1,0 @@
-hi
-hello
-this is python pyinstaller example
-welcome to Deloitte!!!
-Bye...
