@@ -1,0 +1,50 @@
+<guestbook>
+	<guest>
+		<fname>madhuja</fname>
+		<lname>durai</lname>
+		<phone>1234567</phone>
+	</guest>
+
+	<guest>
+		<fname>bhavna</fname>
+		<lname>ravi kumar</lname>
+		<phone>987086</phone>
+	</guest>
+
+	<guest>
+		<fname>sathvik</fname>
+		<lname>kvs</lname>
+		<phone>7659893</phone>
+
+	</guest>
+
+	<guest>
+		<fname>arun</fname>
+		<lname>kumar</lname>
+		<phone>980707</phone>
+	</guest>
+
+	<guest>
+		<fname>uday</fname>
+		<lname>kiran</lname>
+		<phone>7657689</phone>
+	</guest>
+
+	<guest>
+		<fname>bhuvaneshwari</fname>
+		<lname>venkatraman</lname>
+		<phone>87567643</phone>
+	</guest>
+
+	<guest>
+		<fname>abhivan</fname>
+		<lname>saikia</lname>
+		<phone>9989086</phone>
+	</guest>
+    
+    <guest>
+		<fname>paresh</fname>
+		<lname>kumar</lname>
+		<phone>9956086</phone>
+	</guest>
+</guestbook>
