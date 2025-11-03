@@ -1,0 +1,65 @@
+1. Login to AWS console
+
+2. Create EC2 instance: OS=ubuntu; Type=t2.micro; create new key; default VPC and Security Group
+
+3. Launch instance
+
+4. update security group inbound rules for SSH, HTTP, HTTPS, MySQL/Aurora(3306) from 0.0.0.0/0 (anywhere)
+
+5. login to EC2 instance via SSH
+
+6. Run following commands:
+	- sudo apt update && apt upgrade -y
+	- sudo apt install python3 python3-fastapi python3-pip apache2 mysql-server -y
+	- pip install mysql-connector-python --break-system-packages
+
+7. Run command:
+	- sudo mysql_secure_installation
+	[make sure you disable root remote login, remove anonymous users and test database]
+
+8. update mysql config:
+	- sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+	[update bind-address from 127.0.0.1 TO 0.0.0.0]
+	Type: ctrl+o THEN ctrl+x
+
+9. Run: sudo mysql -u root -p
+
+10. Run: create user 'appdev'@'%' identified by 'Developer@123';
+
+11. Run: grant all privileges on *.* to 'appdev'@'%' with grant option;
+
+12. Run: flush privileges; Then Run: exit;
+
+13. Run: sudo service mysql restart
+
+14. check from local system terminal: mysql -u appdev -h IP-ADDR -p with password 'Developer@123'
+
+15. Return to EC2 instance terminal
+
+16. Run: 
+	- sudo a2enmod proxy
+	- sudo a2enmod proxy_http
+
+17. Run: sudo nano /etc/apache2/sites-available/000-default.conf
+	[add proxy details as follows:
+
+	ProxyPreserveHost On
+    ProxyPass / http://0.0.0.0:8080/
+    ProxyPassReverse / http://0.0.0.0:8080/
+
+	]
+
+18. Run: sudo service apache2 restart
+
+19. login to mysql:
+	- mysql -u appdev -p
+	- provide password as 'Developer@123'
+	Run following SQL commnds:
+	- create database student;
+	- use student;
+	- create table student_data(name varchar(20), course varchar(20));
+	- insert into student_data('Prateek','Python');
+	- commit;
+	- exit;
+
+20. Check from IP addrress using http://IPADDR, http://IPADDR/insert_gui, http://IPADDR/readall
