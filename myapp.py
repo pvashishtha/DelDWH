@@ -23,17 +23,17 @@ app=FastAPI()
 
 @app.get('/', response_class=HTMLResponse)
 def home():
-    html="""<body bgcolor='gray'><h1 style='color:blue'>Welcome to Sample Application, Python + MySQL.<br>
-    <h3><a href=f'http://{pubip}/insert_gui'>To insert data, click here</a><br>
-    <a href=f'http://{pubip}/readall'>To view data, click here</a>"""
+    html=f"""<body bgcolor='gray'><h1 style='color:blue'>Welcome to Sample Application, Python + MySQL.<br>
+    <h3><a href='http://{pubip}/insert_gui'>To insert data, click here</a><br>
+    <a href='http://{pubip}/readall'>To view data, click here</a>"""
     return html
 
 @app.get('/insert_gui', response_class=HTMLResponse)
 def insert_gui():
-    html="""
+    html=f"""
     <html><head><title>Insert Data Page!</title></head>
     <body bgcolor='pink'>
-    <form method=GET action=f'http://{pubip}/insert'>
+    <form method=GET action='http://{pubip}/insert'>
     Name: <input type=text name=name><br>
     Course: <input type=text name=course><br>
     <input type=submit value='Insert Data'>
