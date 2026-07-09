@@ -51,3 +51,72 @@ insert into booking values(208,'F101','C304','Business',12000,'18-Sep-19');
 select * from customer;
 select * from flight;
 select * from booking;
+
+
+
+Scenario:
+Consider a website “FlyTrip.com” used by the customers to book the flight tickets online. Customers can signup/register to book tickets for international and domestic travel. The website helps check the availability of seats based on a source and destination city on a given date.
+Here are some assumptions considered for this scenario
+•	The website allows customers to book tickets multiple times
+•	Customers can choose the seats such as economy class, business class while booking the ticket
+•	The flight charges are based on the source and destination and include the charges for the travel class seat chosen at the time of booking.
+Here is the database design used by the developers of the website
+Here is the sample data in the tables.
+     
+
+Write SQL queries to the problem statements given below based on the scenario and details provided on the previous page.
+Requirement 1 : 
+Identify the customer(s) who have paid the highest flightcharge for the travel class economy. Write a SQL query to display id and name of the identified customers.
+Requirement 2 : 
+Identify the international flight(s) which are booked the maximum number of times. Write a SQL query to display id and name of the identified flights.
+Requirement 3 :
+Identify the customer(s) who have paid overall total flightcharge less than the average flightcharge of all bookings belonging to travel class ‘Business’. Write a SQL query to display id and name of the identified customers.
+Requirement 4 :
+Identify the booking(s) done for travel class ‘Business’ by the customers having letter ‘e’ anywhere in their name, for the flights other than ‘Domestic’ flights. Write a SQL query to display booking id, flight’s id and customer’s id of the identified bookings.
+Requirement 5 :
+Identify the booking(s) which have flight charges paid is less than the average flight charge for all flight ticket bookings belonging to the same flight type. Write a SQL query to display booking id, source city, destination city and booking date of the identified bookings.
+
+
+
+
+
+
+
+Requirement 6 :
+Identify the customer(s) who have paid flight charge more than the average flight charge of all other customers, who have booked the flight tickets for the same travel class. Write a SQL query to display id and name of the identified customers.
+Requirement 7 :
+Identify the customer(s) who have booked tickets for both international and domestic flights. Write a SQL query to display the name of the identified customers.
+Requirement 8 :
+Display flight’s id of the booked flight tickets, which fulfills EITHER of these requirements:
+•	Flight’s id of the booked flight tickets that are booked for the maximum number of times for the travel class ‘Business’
+•	The total flight charge of a flight id of booked flight tickets is more than the average flight charge of all bookings done for the same flight for travel class ‘Economy’.
+
+
+
+
+
+
+
+
+
+Exercise 1
+Get all the employees who is making more than average salary with in each department.
+•	Use HR database employees and department tables for this problem.
+•	Compute average salary expense for each department and get those employee details who are making more salary than average salary.
+•	Make sure average salary expense per department is rounded off to 2 decimals.
+•	Output should contain employee_id, department_name, salary and avg_salary_expense (derived field).
+•	Data should be sorted in ascending order by department_id and descending order by salary.
+
+Exercise 2
+Get cumulative salary with in each department for Finance and IT department along with department name.
+•	Use HR database employees and department tables for this problem.
+•	Compute cumulative salary expense for Finance as well as IT departments with in respective departments.
+•	Make sure cumulative salary expense per department is rounded off to 2 decimals.
+•	Output should contain employee_id, department_name, salary and cum_salary_expense (derived field).
+•	Data should be sorted in ascending order by department_name and then salary.
+Exercise 3
+Get top 3 paid employees with in each department by salary (use dense_rank)
+•	Use HR database employees and department tables for this problem.
+•	Highest paid employee should be ranked first.
+•	Output should contain employee_id, department_id, department_name, salary and employee_rank (derived field).
+•	Data should be sorted in ascending order by department_id in ascending order and then salary in descending order.
