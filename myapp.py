@@ -60,4 +60,4 @@ def readall():
     return res
 
 if __name__=='__main__':
-    uvicorn.run("app:app",host="0.0.0.0", port=8000)
+    uvicorn.run("myapp:app",host="0.0.0.0", port=8000)
